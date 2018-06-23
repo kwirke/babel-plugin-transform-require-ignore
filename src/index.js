@@ -18,8 +18,7 @@ export default function () {
 
           if (callee.isIdentifier() && callee.equals('name', 'require')) {
             const arg = nodePath.get('arguments')[0];
-            if (arg && arg.isStringLiteral() &&
-              extensions.indexOf(path.extname(arg.node.value)) > -1) {
+            if (arg && arg.isStringLiteral() && extensions.indexOf(path.extname(arg.node.value)) > -1) {
               nodePath.remove();
             }
           }
