@@ -1,4 +1,4 @@
-## Fork of babel-plugin-transform-require-ignore
+## babel-plugin-transform-require-ignore-assign
 
 Fork of [babel-plugin-transform-require-ignore](https://github.com/morlay/babel-plugin-transform-require-ignore).
 
