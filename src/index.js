@@ -20,11 +20,7 @@ export default function () {
             const arg = nodePath.get('arguments')[0];
             if (arg && arg.isStringLiteral() &&
               extensions.indexOf(path.extname(arg.node.value)) > -1) {
-              if (nodePath.parentPath.isVariableDeclarator()) {
-                throw new Error(`${arg.node.value} should not be assigned to variable.`);
-              } else {
-                nodePath.remove();
-              }
+              nodePath.remove();
             }
           }
         },
